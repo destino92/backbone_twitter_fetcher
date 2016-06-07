@@ -58,3 +58,18 @@ app.get('/profile', function(request, response){
 		}
 	});
 });
+
+app.get('/search/:query', function(request, response){
+	response.header('Access-Control-Allow-Origin','*');
+	// search term is
+	var searchTerm = request.params.query;
+	client.get('search/tweets', { q: searchTerm, count: 100 }, function(err, reply){
+		if(err){
+			console.log('Error: ' + err);
+			request.send(404);
+		}
+		if(reply){
+			response.json(reply);
+		}
+	});
+});
