@@ -10,5 +10,13 @@ var com.destino.view.TimelineView = Backbone.View.extend({
 		self.render();
 		self.timeline.fetch({reset:true});
 		self.listenTo(self.timeline, 'reset', self.render);
+	},
+	render: function(){
+		var self = this;
+		if(self.timeline.models.length > 0){
+			var output = self.template({tweet:self.timeline.toJSON()});
+			self.$el.append(output);
+		}
+		return self;
 	}
 });
