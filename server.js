@@ -17,3 +17,16 @@ function connectToTwitter(){
 
 //Make the client connect to Twitter
 connectToTwitter();
+//Additional code to allow CORS requests
+//Additional setup to allow CORS requests
+var allowCrossDomain = function(req, response, next) {
+	response.header('Access-Control-Allow-Origin', "http://localhost");
+	response.header('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, POST, DELETE');
+	response.header('Access-Control-Allow-Headers', 'Content-Type');
+	if('OPTIONS' == req.method){
+		response.send(200);
+	} else {
+		next();
+	}
+};
+app.use(allowCrossDomain);
