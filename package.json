@@ -1,0 +1,25 @@
+{
+  "name": "backbone_twitter",
+  "version": "1.0.0",
+  "description": "a twitter fetcher app built with BACKBONE.JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/destino92/backbone_twitter_fetcher.git"
+  },
+  "author": "Destino Dello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/destino92/backbone_twitter_fetcher/issues"
+  },
+  "homepage": "https://github.com/destino92/backbone_twitter_fetcher#readme",
+  "devDependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "twit": "^2.2.4"
+  }
+}
