@@ -1,0 +1,1 @@
+var timeline = new com.destino.view.TimelineView();
