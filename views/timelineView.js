@@ -1,7 +1,7 @@
-var com = com || {}
-var com.destino = com.destino || {}
-var com.destino.view = com.destino.view || {}
-var com.destino.view.TimelineView = Backbone.View.extend({
+var com = com || {};
+com.destino = com.destino || {};
+com.destino.view = com.destino.view || {};
+com.destino.view.TimelineView = Backbone.View.extend({
 	el: "#timeline",
 	template: Handlebars.compile($('#timeline-template').html()),
 	initialize: function(options){
