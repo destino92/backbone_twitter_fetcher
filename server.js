@@ -30,3 +30,5 @@ var allowCrossDomain = function(req, response, next) {
 	}
 };
 app.use(allowCrossDomain);
+// Parses the JSON object given in the body request
+app.use(bodyParser());
