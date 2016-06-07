@@ -32,3 +32,15 @@ var allowCrossDomain = function(req, response, next) {
 app.use(allowCrossDomain);
 // Parses the JSON object given in the body request
 app.use(bodyParser());
+// Return the Twitter timeline of the current user
+app.get('/timeline', function(request, response){
+	response.header('Access-Control-Allow-Origin','*');
+	client.get('statuses/home_timeline', {}, function(err, reply){
+		if(err){
+			response.send(404);
+		}
+		if(reply){
+			response.json(reply);
+		}
+	});
+});
