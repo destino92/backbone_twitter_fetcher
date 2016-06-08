@@ -19,7 +19,7 @@ com.destino.router.AppRouter = Backbone.Router.extend({
 		}
 		self.searchModel.fetch({
 			success: function(model){
-				var resultsView = new com.destino.view.ResultsView(model:model);
+				var resultsView = new com.destino.view.ResultsView({model:model});
 			},
 			error: function(e){
 				alert("An error occured");

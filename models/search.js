@@ -1,7 +1,7 @@
 var com = com || {};
 com.destino = com.destino || {};
 com.destino.model = com.destino.model || {};
-com.destino.model.Tweet = Backbone.Model.extend({
+com.destino.model.Search = Backbone.Model.extend({
 	url: 'http://localhost:8080/search',
 	sync: function(method, model, options){
 		if(this.get('query')){

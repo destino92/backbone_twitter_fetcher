@@ -4,7 +4,7 @@ com.destino.view = com.destino.view || {};
 com.destino.view.ResultsView = Backbone.View.extend({
 	el: "#timeline",
 	model: null,
-	template: handlebars.compile($('#timeline-template').html()),
+	template: Handlebars.compile($('#timeline-template').html()),
 	initialize: function(options){
 		var self = this;
 		self.model = options.model;
@@ -14,7 +14,7 @@ com.destino.view.ResultsView = Backbone.View.extend({
 	},
 	render : function(){
 		var self = this;
-		output = template({tweet: self.model.get('statuses')});
+		output = self.template({tweet: self.model.get('statuses')});
 		self.$el.html(output);
 		return self;
 	}

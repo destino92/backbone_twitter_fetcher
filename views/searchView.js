@@ -1,11 +1,11 @@
 var com = com || {};
 com.destino = com.destino || {};
 com.destino.view = com.destino.view || {};
-com.destino.view.ProfileView = Backbone.View.extend({
+com.destino.view.SearchView = Backbone.View.extend({
 	el: "#search",
 	model: null,
 	events: {
-		'click #searchButton': 'runSearch'
+		'click #searchbutton': 'runSearch'
 	},
 	initialize: function(options){
 		var self = this;
