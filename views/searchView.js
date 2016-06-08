@@ -2,7 +2,7 @@ var com = com || {};
 com.destino = com.destino || {};
 com.destino.view = com.destino.view || {};
 com.destino.view.ProfileView = Backbone.View.extend({
-	el: "search",
+	el: "#search",
 	model: null,
 	events: {
 		'click #searchButton': 'runSearch'

@@ -4,6 +4,7 @@ com.destino.router = com.destino.router || {};
 com.destino.router.AppRouter = Backbone.Router.extend({
 	searchModel: null,
 	initialize: function(options){
+		var self = this;
 		self.searchModel = options.searchModel;
 		self.listenTo(self.searchModel, 'change:query', self.navigateToSearch);
 	},
