@@ -14,10 +14,12 @@
 					<h2>My Tweets</h2>
 				</div>
 			</div>
-			<div id="timeline">
-				
+			<div class="row">
+				<div id="timeline" class="col-md-6"></div>
+				<div id="profile-view" class="col-md-4 pull-right"></div>
 			</div>
 		</div>
+
 		<!-- Handlebars timeline template -->
 		<script type="text/x-handlebars-template" id="timeline-template">
 			<ul class="list-unstyled">
@@ -37,6 +39,22 @@
 				{{/each}}
 			</ul>
 		</script>
+
+		<script type="template/x-handlebars-template">
+			<div class="col-md-2">
+				<img src="{{user.profile_image_url}}" alt="" />
+			</div>
+			<div class="col-md-10">
+				<h3 style="margin-top:0">{{user.name}}</h3>
+				<p>
+					{{user.description}}
+				</p>
+				<p class="pull-right">
+					<strong>Followers: {{user.followers_count}}</strong>
+				</p>
+			</div>
+		</script>
+
 		<!-- Dependencies -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
